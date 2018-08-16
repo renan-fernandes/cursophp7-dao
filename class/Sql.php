@@ -13,11 +13,11 @@ class Sql extends PDO //com extende de PDO, ela herda tudo de PDO...
 	{
 		foreach($parameters as $key => $value)
 		{
-			$this->setParam($key, $value); //
+			$this->setParam($statement, $key, $value);
 		}
 	}
 	
-	private function setParam($statement, $key, $value) //
+	private function setParam($statement, $key, $value) 
 	{
 		$statement->bindParam($key, $value);
 	}
